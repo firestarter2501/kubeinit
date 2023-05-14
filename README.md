@@ -18,8 +18,11 @@ kubeadm token create --print-join-command
 ここまで来たらworkerにtoken貼り付けてクラスタに追加する
 ### calico(master)
 ```
-curl https://docs.projectcalico.org/manifests/calico.yaml -O
-kubectl apply -f calico.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
+watch kubectl get pods -n calico-system
+kubectl taint nodes --all node-role.kubernetes.io/control-plane-
+kubectl taint nodes --all node-role.kubernetes.io/master-
 ```
 ### helm(master)
 ```
