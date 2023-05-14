@@ -1,0 +1,29 @@
+Host k8s-master0
+    Hostname [node ip]
+    User kishi
+    IdentityFile ~/.ssh/id_rsa_k8s
+
+Host k8s-worker0
+    Hostname [node ip]
+    User kishi   
+    IdentityFile ~/.ssh/id_rsa_k8s
+
+Host k8s-worker1
+    Hostname [node ip]
+    User kishi   
+    IdentityFile ~/.ssh/id_rsa_k8s
+
+Host k8s-x86-master0
+    Hostname [node ip]
+    User kishi
+    IdentityFile ~/.ssh/id_rsa_k8s
+
+Host k8s-x86-worker0
+    Hostname [node ip]
+    User kishi
+    IdentityFile ~/.ssh/id_rsa_k8s
+
+Host k8s-x86-worker1
+    Hostname [node ip]
+    User kishi
+    IdentityFile ~/.ssh/id_rsa_k8s

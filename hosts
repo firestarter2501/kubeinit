@@ -1,0 +1,16 @@
+---
+all:
+  vars:
+    ansible_user: kishi
+    ansible_ssh_private_key_file: ~/.ssh/id_rsa_k8s
+  children:
+    k8s:
+      hosts:
+        k8s-master0:
+        k8s-worker0:
+        k8s-worker1:
+    k8s_x86:
+      hosts:
+        k8s-x86-master0:
+        k8s-x86-worker0:
+        k8s-x86-worker1:

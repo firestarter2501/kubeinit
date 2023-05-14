@@ -1,0 +1,30 @@
+# https://developers.cloudflare.com/cloudflare-one/connections/connect-apps/deployment-guides/kubernetes/#routing-with-cloudflare-tunnel
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: cloudflared
+  name: cloudflared-deployment
+  namespace: kube-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      pod: cloudflared
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        pod: cloudflared
+    spec:
+      containers:
+      - command:
+        - cloudflared
+        - tunnel
+        - run
+        args:
+        - --token
+        - <token value>
+        image: cloudflare/cloudflared:latest
+        name: cloudflared

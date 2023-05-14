@@ -1,0 +1,10 @@
+network:
+    version: 2
+    ethernets:
+        eth0:
+            dhcp4: no
+            addresses: [ip/sub]
+            gateway4: gw ip
+            nameservers:
+                addresses: [1.1.1.1,1.0.0.1]
+                search: []

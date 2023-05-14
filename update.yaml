@@ -1,0 +1,17 @@
+---
+- hosts: [edit group name]
+  become: true
+  become_method: sudo
+  tasks:
+    - name: apt update
+      apt:
+        update_cache: yes
+    - name: apt upgrade
+      apt:
+        upgrade: yes
+    - name: apt autoremove
+      apt:
+        autoremove: yes
+    - name: Reboot
+      ansible.builtin.reboot: reboot_timeout=600
+      become: true
