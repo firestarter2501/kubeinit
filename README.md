@@ -15,12 +15,12 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubeadm token create --print-join-command
 ```
-ここまで来たらworkerにtoken貼り付けてクラスタに追加する
 ### calico(master)
 ```
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
 kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
 ```
+ここまで来たらworkerにtoken貼り付けてクラスタに追加する
 ### helm(master)
 ```
 curl https://baltocdn.com/helm/signing.asc | gpg --dearmor | sudo tee /usr/share/keyrings/helm.gpg > /dev/null
