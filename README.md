@@ -17,8 +17,7 @@ kubeadm token create --print-join-command
 ```
 ### calico(master)
 ```
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/tigera-operator.yaml
-kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/v3.25.1/manifests/custom-resources.yaml
+kubectl apply -f calico.yaml
 ```
 ここまで来たらworkerにtoken貼り付けてクラスタに追加する
 ### helm(master)
