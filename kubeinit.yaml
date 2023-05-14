@@ -9,6 +9,7 @@
           - apt-transport-https
           - ca-certificates
           - curl
+          - nfs-common
     - name: Install Docker public signing key
       shell: curl -sSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor
         --yes -o /usr/share/keyrings/docker-archive-keyring.gpg
