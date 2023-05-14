@@ -1,6 +1,6 @@
 # k8s-init
 ## k8sのinitをするにあたっての下準備をansibleで極力自動化したのでメモ
-- /etc/netplan/99-config.yamlを書き込んで```netplan apply```
+- ```/etc/netplan/99-config.yaml```を書き込んで```netplan apply```
 - ```ssh-keygen -f ~/.ssh/id_rsa_k8s```で鍵作成
   - パスフレーズは何も入力せずEnter  
 - ```ssh-copy-id -i ~/.ssh/id_rsa_k8s.pub [リモートユーザー]@[リモートサーバーのホスト名]```で公開鍵転送
