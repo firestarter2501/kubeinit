@@ -31,7 +31,7 @@ sudo apt install helm
 ### nfs-subdir-external-provisioner
 ```
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
-helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner -n kube-system --set nfs.server=[nfs server ip] --set nfs.path=/k8s-storage --set storageClass.defaultClass=true --set nfs.mountOptions={"nfsvers=4.0"}
+helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner -n kube-system --set nfs.server=[nfs server ip] --set nfs.path=[folder path] --set storageClass.defaultClass=true --set nfs.mountOptions={"nfsvers=4.0"}
 ```
 ### metallb
 ```
