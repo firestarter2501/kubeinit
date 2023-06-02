@@ -4,7 +4,7 @@
 - ```ssh-keygen -f ~/.ssh/id_rsa_k8s```で鍵作成
   - パスフレーズは何も入力せずEnter  
 - ```ssh-copy-id -i ~/.ssh/id_rsa_k8s.pub [リモートユーザー]@[リモートサーバーのホスト名]```で公開鍵転送
-- ```.ssh/config```を書き換え
+- ```.ssh/config```の[node ip]などノード情報を書き換え
 - ```ansible-playbook kubeinit.yaml --ask-become-pass```を実行
 
 ### setup(master)
