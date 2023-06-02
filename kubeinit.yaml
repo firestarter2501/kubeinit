@@ -1,5 +1,5 @@
 ---
-- hosts: [edit group name]
+- hosts: [group name]
   become: true
   become_method: sudo
   tasks:
