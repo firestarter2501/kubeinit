@@ -30,6 +30,7 @@ sudo apt update
 sudo apt install helm
 ```
 ### nfs-subdir-external-provisioner
+[nfs server ip], [folder path]を書き換えて以下を実行
 ```
 helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
 helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner -n kube-system --set nfs.server=[nfs server ip] --set nfs.path=[folder path] --set storageClass.defaultClass=true --set nfs.mountOptions={"nfsvers=4.0"}
@@ -42,6 +43,7 @@ helm install metallb metallb/metallb -n metallb-system
 kubectl apply -f ipaddresspool.yaml
 ```
 ### argocd
+[argo cd access ip]を書き換えて以下を実行
 ```
 kubectl create namespace argocd
 helm repo add argo https://argoproj.github.io/argo-helm
