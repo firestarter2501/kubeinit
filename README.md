@@ -16,6 +16,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubeadm token create --print-join-command
 ```
 ### calico(master)
+[cluster ip]/[cidr]を自環境に書き換えて以下を実行
 ```
 kubectl apply -f calico.yaml
 ```
