@@ -6,8 +6,6 @@
 - ```ssh-copy-id -i ~/.ssh/id_rsa_k8s.pub [リモートユーザー]@[リモートサーバーのホスト名]```で公開鍵転送
 - ```.ssh/config```の[node ip]などノード情報を書き換え
 - [group name]を書き換えて```ansible-playbook kubeinit.yaml --ask-become-pass```を実行
-  - k8sのaptで🔑関連のエラーが出たら各ノードで以下を実行
-  - ```curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor　 -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg```
 
 ### setup(master)
 ```
