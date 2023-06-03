@@ -8,7 +8,6 @@
 - [group name]を書き換えて```ansible-playbook kubeinit.yaml --ask-become-pass```を実行
   - k8sのaptで🔑関連のエラーが出たら以下を実行
   - ```curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-archive-keyring.gpg```
-  - ```echo "deb [signed-by=/etc/apt/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list```
 
 ### setup(master)
 ```
